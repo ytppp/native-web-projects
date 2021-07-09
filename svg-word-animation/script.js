@@ -3,14 +3,15 @@ const strokes = [];
 let j = 0;
 
 for (let i = 0; i < paths.length; i++) {
+  // get a svg path element total length
   strokes[i] = paths[i].getTotalLength();
-  paths[i].style.strokeDashoffset = paths[i].getTotalLength();
   paths[i].style.strokeDasharray = paths[i].getTotalLength();
+  paths[i].style.strokeDashoffset = paths[i].getTotalLength();
 }
 
-function strokeLetter(letter, pathDist) {
-  letter.animate([{ strokeDashoffset: pathDist }, { strokeDashoffset: '0' }], {
-    duration: pathDist * 7,
+function strokeLetter(letter, pathLen) {
+  letter.animate([{ strokeDashoffset: pathLen }, { strokeDashoffset: 0 }], {
+    duration: pathLen * 7,
     fill: 'forwards',
   }).onfinish = function () {
     j++;
