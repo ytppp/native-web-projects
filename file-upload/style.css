@@ -1,0 +1,15 @@
+.drag-area {
+  height: 200px;
+  width: 300px;
+  border: dashed 1px gray;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drag-box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}

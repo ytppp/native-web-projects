@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>web component</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <user-card image="https://cdn.jsdelivr.net/gh/ytppp/ytpblog-image-store/img/4bba972a094eb1bdc8cbbc55e2bd4ddf.jpg"
+    name="lucy" email="lucy@163.com">
+  </user-card>
+  <my-button label="btn" as-atom></my-button>
+  <script src="./components/user-card/script.js"></script>
+  <script src="./components/my-button/script.js"></script>
+  <script src="./script.js"></script>
+
+  <script>
+    const element = document.querySelector('my-button');
+    element.label = 'Click Me';
+    element.addEventListener('onClick', (val) => {
+      console.log(val)
+    });
+  </script>
+</body>
+
+</html>

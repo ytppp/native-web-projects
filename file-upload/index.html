@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>拖拽上传</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="drag-area" id="drag-area">
+      <div id="file-name" class="file-name"></div>
+      <div id="uploader" class="uploader">
+        <span>将文件拖拽至此，或</span>
+        <label for="fileInput" style="color: #11A8FF; cursor: pointer">点此上传</label>
+      </div>
+    </div>
+    <div class="footer">
+      <input type="file" id="fileInput" hidden="hidden">
+      <label for="fileInput" style="color: #11A8FF; cursor: pointer">选择文件</label>
+      <button>提交</button>
+    </div>
+  </div>
+  <div id="drag" class="drag-box" draggable="true"></div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
