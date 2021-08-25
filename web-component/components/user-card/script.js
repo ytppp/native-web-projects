@@ -82,7 +82,6 @@ class UserCard extends HTMLElement {
   static get observedAttributes() {
     return ['image', 'name', 'email'];
   }
-
   attributeChangedCallback(name, oldVal, newVal) {
     this.render();
   }
